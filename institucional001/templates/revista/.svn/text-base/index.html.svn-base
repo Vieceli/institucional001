@@ -1,0 +1,19 @@
+{% extends "base_layout.html" %}
+
+{% block extralinks %}{% endblock %}
+{% block extracss %}{% endblock %}
+{% block extrajs %}{% endblock %}
+
+{% block middle %}
+<div id="featured-deal">
+	<h1>Revista da ultima edição em {{ cidade }}</h1>
+	{% for re in estreando %}
+		<a href="{{ re.nome  }}">
+					  	  <img src="/media/{{ re.miniatura }}"  class="bn" width="60" height="60"/>
+					<br />
+						{{ re.nome }}
+						
+		</a>
+	{% endfor %}
+	
+{% endblock middle %}	

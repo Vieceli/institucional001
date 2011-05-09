@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<div id="principal">
+    {% block cabecalho %}
+        {% include "cabecalho.html" %}
+    {% endblock cabecalho %}
+
+    <div id="meio">
+        {% block meio %}
+        {% endblock meio %}
+    </div>
+
+    {% block rodape %}
+        {% include "rodape.html" %}
+    {% endblock rodape %}
+</div>
+
+{% endblock conteudo %}

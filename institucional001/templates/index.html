@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block titulo %}Inicial - {% endblock %}
+
+{% block extralinks %}{% endblock %}
+{% block extracss %}{% endblock %}
+{% block extrajs %}{% endblock %}
+
+{% block conteudo %}
+<div id="conteudo" class="conteudo">
+	<div id="edicao_atual" class="edicao_atual">
+		<h1>Revistas da ultima edição em {{ cidade }}</h1>
+		{% for re in estreando %}
+		<div id="revista_edicao" class="revista_edicao">
+			<a href="{{ re.nome  }}">
+						  	  <img src="/media/{{ re.miniatura }}"  class="bn" width="60" height="60"/>
+							
+			</a>
+			<br />
+			Area da revista : {{ re.area }}
+		</div>
+		{% endfor %}
+	</div>
+	-
+	<hr width="100%" color="black" size="2">
+	-
+	<div id="empresa" class="empresa">
+		Texto da empresa
+		<div id="video_empresa" class="video_empresa">
+			Video da empresa
+		</div>
+	</div>
+	<div id="agende_visita" class="agende_visita">
+		Clique aqui para agendar uma visita
+	</div>
+</div>	
+{% endblock conteudo %}	

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div id="revista_flash" class="revista_flash">
+	
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="900" height="600" id="revista" align="left">
+				<param name="movie" value="/media/{{ revista.arquivo }}" />
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#87CEFF" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="opaque" />
+				<param name="scale" value="noborder" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="center" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="/media/{{ revista.arquivo }}" width="900" height="600">
+					<param name="movie" value="/media/{{ revista.arquivo }} />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#87CEFF" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="opaque" />
+					<param name="scale" value="noborder" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="center" />
+					<param name="allowScriptAccess" value="sameDomain" />
+				<!--<![endif]-->
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+</div>
+{% endblock conteudo %}	
