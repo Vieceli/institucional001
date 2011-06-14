@@ -9,7 +9,7 @@ urlpatterns = patterns('',
   
     
     url(r'^(?P<cidade_slug>\w+)/$', 'institucional001.catalogo.views.cidade_index', name='cidade_index'),
-    url(r'^(?P<cidade_slug>\w+)/(?P<nome>[-\w]+)/$', 'institucional001.catalogo.views.revista_flash',
+    url(r'^(?P<cidade_slug>\w+)/(?P<slug>[-\w]+)/$', 'institucional001.catalogo.views.revista_flash',
         name='revista_flash'),
 )
             #    url(r'^(?P<cidade_slug>\w+)/assinar/$', 'massive.engine.views.inscricao_cidade',

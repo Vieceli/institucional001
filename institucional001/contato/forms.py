@@ -5,24 +5,55 @@ Created on 18/04/2011
 '''
 from django.forms.models import ModelForm
 from django import forms
-from institucional001.catalogo.models import EmailInscricao
-from institucional001.contato.models import Agenda_Visita
+from institucional001.contato.models import EmailInscricao, Contato,\
+    Agende_Visita
+from gmapi.forms.widgets import GoogleMap
+#from institucional001.contato.models import Contato, Agende_Visita, EmailInscricao
 
-class EmailForm(ModelForm):
-    username = forms.CharField(max_length=30, label=u'Usuario')
+class MapForm(forms.Form):
+    map = forms.Field(widget=GoogleMap(attrs={'width':410, 'height':210}))
+
+CIDADES = (('Go', 'Goiania'),('An', 'Anapolis.'),)
+
+class EmailForm(forms.Form):
     email = forms.EmailField(label=u'Endereco de email')
+    cidade = forms.ChoiceField(choices=CIDADES)
     
-    class Meta:
-        model = EmailInscricao
-        
-class Agenda_Visita_Form(forms.Form):
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        try:
+            EmailInscricao.objects.get(email=email)
+        except EmailInscricao.DoesNotExist:
+            return email
+        raise forms.ValidationError('Email ja cadastrado')
+                
+class Contato_Form(forms.Form):
     nome = forms.CharField(label=u'Nome ')
     empresa = forms.CharField()
-    tipo_anuncio = forms.CharField()
-    tipo_midia = forms.CharField()
-    telefone = forms.CharField()
     email = forms.EmailField(label=u'Endereco de email')
-    mensagem = forms.CharField()
+    assunto = forms.CharField(widget=forms.Textarea)
     
-    class Meta:
-        model = Agenda_Visita
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        try:
+            EmailInscricao.objects.get(email=email)
+        except EmailInscricao.DoesNotExist:
+            return email
+        raise forms.ValidationError('Email ja cadastrado')
+
+    
+class Agende_Visita_Form(forms.Form):
+    nome = forms.CharField(label=u'Nome ')
+    empresa = forms.CharField()
+    email = forms.EmailField(label=u'Endereco de email')
+    telefone = forms.CharField()
+    assunto = forms.Textarea()
+    
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        try:
+            EmailInscricao.objects.get(email=email)
+        except EmailInscricao.DoesNotExist:
+            return email
+        raise forms.ValidationError('Email ja cadastrado')
+

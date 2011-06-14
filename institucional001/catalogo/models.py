@@ -129,15 +129,5 @@ class Depoimento(models.Model):
     depoimento = models.CharField(verbose_name=_("Depoimento"), max_length=256)
     autor = models.CharField(verbose_name=_("Autor"), max_length=256)
 
-class EmailInscricao(models.Model):
-    class Meta:
-        verbose_name = _('Receber Email')
-        verbose_name_plural = _('Receber Email')
 
-    email = models.EmailField(blank=True, help_text="Endereco de email")
-    cidade = models.ForeignKey(Cidade)
-    ativo = models.BooleanField(default=True, db_index=True)
-
-    def __unicode__(self):
-        return self.email
 

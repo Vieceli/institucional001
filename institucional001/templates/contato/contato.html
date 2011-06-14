@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block titulo %}Contato - {% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrajs %}
+{{ block.super }}
+
+jQuery(function() {
+      var form = jQuery("#form_contato");
+      form.submit(function(e) {
+          jQuery("#sendbutton").attr('disabled', true)
+          jQuery("#sendwrapper").prepend('<span>Enviando mensagem... </span>')
+          jQuery("#ajaxwrapper").load(
+              form.attr('action') + '#ajaxwrapper',
+              form.serializeArray(),
+              function(responseText, responseStatus) {
+                  jQuery("#sendbutton").attr('disabled', false)
+              }
+          );
+          e.preventDefault(); 
+      });
+  });
+
+
+
+{% endblock %}
+
+{% block conteudo %}
+<div id="erro_form" >
+</div>
+<div id="conteudo" class="conteudo">
+  <h1>Contato</h1>
+  
+    <!-- Mapa -->
+   
+	    {{ form_mapa.map }}
+	    {{ form_mapa.media.js }}
+	    <script type="text/javascript">
+	        window.myobj = {
+	            markerOver: function() { this.openInfoWindow(); },
+	            markerOut: function() { this.closeInfoWindow(); }
+	        };
+	    </script>
+  
+	<form action="" method="post" id="contato_form">
+	    <div id="ajaxwrapper">
+		    {% csrf_token %}
+		    {{ form_contato.non_field_errors }}
+		    {{ form_contato.as_p }}
+		    <p id="sendwrapper"><input type="submit" value="Enviar" id="sendbutton"/></p>
+	    </div>
+  </form>
+</div>
+	
+{% endblock conteudo %}	

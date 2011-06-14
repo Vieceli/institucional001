@@ -1,5 +1,28 @@
 {% extends "base.html" %}
 
+{% block titulo %}{{ revista }} - {% endblock %}
+
+{% block metadata %}
+  	<meta content="{{ meta_keywords }}" name="Keywords"/>
+    <meta content="{{ meta_description }}" name="Description"/>
+{% endblock metadata %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
 {% block conteudo %}
 <div id="revista_flash" class="revista_flash">
 	

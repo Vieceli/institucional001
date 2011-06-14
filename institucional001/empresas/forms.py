@@ -5,7 +5,7 @@ Created on 18/04/2011
 '''
 from django.forms.models import ModelForm
 from django import forms
-from institucional001.contato.models import Agenda_Visita
+from institucional001.contato.models import Agende_Visita
 from institucional001.empresas.models import STATUS, Empresa
 
 
@@ -31,4 +31,4 @@ class Agenda_Visita_Form(forms.Form):
     mensagem = forms.CharField()
     
     class Meta:
-        model = Agenda_Visita
+        model = Agende_Visita

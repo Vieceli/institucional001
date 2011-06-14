@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from django.contrib import admin
-from models import Cidade,EmailInscricao,Revista,Area,Edicao
+from models import Cidade,Revista,Area,Edicao
+from institucional001.contato.models import EmailInscricao
 
 class AreaAdmin(admin.ModelAdmin):
     """Admin class"""
