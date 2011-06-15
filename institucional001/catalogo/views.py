@@ -26,7 +26,8 @@ def cidade_index(request, cidade_slug):
                 
     email_form = EmailForm()
     email_cadastrado = False  
-    email_duplicado=False     
+    email_duplicado=False  
+       
     if request.POST:
         postdata = request.POST.copy()
         email_form = EmailForm(postdata)
