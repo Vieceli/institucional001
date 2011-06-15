@@ -8,7 +8,6 @@ urlpatterns = patterns('',
     url(r'^$', 'institucional001.catalogo.views.index', name='index'),
     
     (r'^revistas/', include('institucional001.catalogo.urls')),
-    (r'^contato/', include('institucional001.contato.urls')),
     
     
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
