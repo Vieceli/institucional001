@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ revista }} - {% endblock %}
+
+{% block metadata %}
+  	<meta content="{{ meta_keywords }}" name="Keywords"/>
+    <meta content="{{ meta_description }}" name="Description"/>
+{% endblock metadata %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+{% block conteudo %}
+<div id="conteudo" class="conteudo">
+	<div id="edicao_atual" class="edicao_atual">
+		<h1>Revistas da ultima edição em {{ cidade }}</h1>
+		{% for re in estreando %}
+		<div id="revista_edicao" class="revista_edicao">
+			<a href="{{ re.slug  }}">
+						  	  <img src="/media/{{ re.miniatura }}"  class="bn" width="60" height="60"/>
+							
+			</a>
+			<br />
+			Area da revista : {{ re.area }}
+		</div>
+		{% endfor %}
+	</div>
+	-
+	<hr width="100%" color="black" size="2">
+{% endblock conteudo %}	

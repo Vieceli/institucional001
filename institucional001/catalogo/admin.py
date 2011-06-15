@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from models import Cidade,Revista,Area,Edicao
-from institucional001.contato.models import EmailInscricao
+from institucional001.contato.models import EmailInscricao, Contato
 
 class AreaAdmin(admin.ModelAdmin):
     """Admin class"""
@@ -20,7 +20,11 @@ class CidadeAdmin(admin.ModelAdmin):
     }
 
 class EmailInscricaoAdmin(admin.ModelAdmin):
-   """admin class"""
+    """admin class"""
+
+class ContatoAdmin(admin.ModelAdmin):
+    """admin class"""
+   
 
 class RevistaAdmin(admin.ModelAdmin):
     prepopulated_fields = {
@@ -33,8 +37,11 @@ class EdicaoAdmin(admin.ModelAdmin):
 
 admin.site.register(Area, AreaAdmin)
 admin.site.register(Cidade, CidadeAdmin)
-admin.site.register(EmailInscricao, EmailInscricaoAdmin)
 admin.site.register(Revista, RevistaAdmin)
 admin.site.register(Edicao, EdicaoAdmin)
+
+admin.site.register(EmailInscricao, EmailInscricaoAdmin)
+admin.site.register(Contato, ContatoAdmin)
+
 
 

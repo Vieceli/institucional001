@@ -24,21 +24,24 @@
 	<div id="logo" class="logo">
     	
     </div>
-    
  
     <div id="menu" class="menu">
-	    {% load flatpages %}
-		{% get_flatpages as flatpages %}
-		<ul>
 			<span id="item_menu" class="item_menu">
 				<a href="/">Inicio</a>
 			</span> |
-		    {% for page in flatpages %}
-		        <span id="item_menu" class="item_menu">
-		        	<a href="{{ page.url }}">{{ page.title }}</a> | 
-		        </span>
-		    {% endfor %}
-		</ul>
+			<span id="item_menu" class="item_menu">
+				<a href="{% url revistas cidade %}">Revistas</a>
+			</span> |
+			<span id="item_menu" class="item_menu">
+				<a href="/anuncios/">Anuncios</a>
+			</span> |
+			<span id="item_menu" class="item_menu">
+				<a href="/casos-de-sucesso/">Casos de Sucesso</a>
+			</span> |
+			<span id="item_menu" class="item_menu">
+				<a href="/contato/">Contato</a>
+			</span> |
+		  
 	  
 	</div>
 </div>

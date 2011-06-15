@@ -39,6 +39,19 @@ def cidade_index(request, cidade_slug):
 
     return render_to_response('index.html',locals(),context_instance=RequestContext(request),)
 
+def revistas(request, cidade_slug):
+    cidade = get_object_or_404(Cidade, slug=cidade_slug)
+    cidades_disponiveis = Cidade.objects.all()
+    #revistas = Revista.objects.ativa_na_cidade(cidade)
+    #revistas = get_object_or_404(Revista, cidade=cidade)
+    revistas = Revista.objects.filter(cidade=cidade,ativo=True)
+    estreando = Revista.objects.filter(cidade=cidade,ativo=True,estreando=True)[:8]
+    meta_keywords = settings.META_KEYWORDS
+    meta_description = settings.META_DESCRIPTION
+    
+    return render_to_response('revista/revistas.html',locals(),context_instance=RequestContext(request),)
+    
+
 def index(request):
     return HttpResponseRedirect(settings.DEFAULT_CITY_SLUG)
 

@@ -1,21 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-# Create your models here.
-class Agende_Visita(models.Model):
-    
-    class Meta:
-        verbose_name = _('Agende visita')
-        verbose_name_plural = _('Agende visitas')
-    
-    nome = models.CharField(blank=False,max_length=50)
-    empresa = models.CharField(blank=False,max_length=50)
-    telefone = models.CharField(blank=True,max_length=50)
-    email = models.EmailField()
-    mensagem = models.CharField(blank=False,max_length=250)
-    
-    def __unicode__(self):
-        return self.email
-    
+# Create your models here.    
     
 class Contato(models.Model):
     
@@ -25,8 +10,9 @@ class Contato(models.Model):
     
     nome = models.CharField(blank=False,max_length=50)
     empresa = models.CharField(blank=False,max_length=50)
+    telefone = models.CharField(blank=True,max_length=50)
     email = models.EmailField()
-    mensagem = models.CharField(blank=False,max_length=250)
+    mensagem = models.TextField(blank=False,max_length=250)
     
     def __unicode__(self):
         return self.email
