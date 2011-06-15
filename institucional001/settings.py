@@ -27,15 +27,22 @@ ADMINS = (
 )
 MANAGERS = ADMINS
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'institucional001',
+#        'USER': 'postgres',
+#        'PASSWORD': '1234',
+#    }
+#}
 DATABASES = {
     'default': {
-        'ENGINE': 'sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'institucional001.db',
         'USER': '',
         'PASSWORD': '',
     }
 }
-
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

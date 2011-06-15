@@ -5,6 +5,10 @@ from django.views.generic.simple import direct_to_template
 admin.autodiscover()
 
 urlpatterns = patterns('',
+                       
+    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    (r'^admin/', include(admin.site.urls)),
+    
     url(r'^$', 'institucional001.catalogo.views.index', name='index'),
     
     #(r'^revistas/', include('institucional001.catalogo.urls')),
@@ -18,8 +22,7 @@ urlpatterns = patterns('',
         name='revista_flash'),
     
     
-    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    (r'^admin/', include(admin.site.urls)),
+
     # Static stuff (apache should serve this in production)
     (r'^(robots.txt)$', 'django.views.static.serve', {'document_root': '/var/www/massivecoupon/'}),
     
