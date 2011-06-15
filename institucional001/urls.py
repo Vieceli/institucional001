@@ -7,7 +7,15 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'institucional001.catalogo.views.index', name='index'),
     
-    (r'^revistas/', include('institucional001.catalogo.urls')),
+    #(r'^revistas/', include('institucional001.catalogo.urls')),
+    url(r'^(?P<cidade_slug>\w+)/$', 'institucional001.catalogo.views.cidade_index', name='cidade_index'),
+    
+    url(r'^(?P<cidade_slug>\w+)/revistas/$', 'institucional001.catalogo.views.revistas', name='revistas'),
+    
+    url(r'^(?P<cidade_slug>\w+)/contato/$', 'institucional001.catalogo.views.contato', name='contato'),
+    
+    url(r'^(?P<cidade_slug>\w+)/(?P<slug>[-\w]+)/$', 'institucional001.catalogo.views.revista_flash',
+        name='revista_flash'),
     
     
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),

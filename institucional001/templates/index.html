@@ -28,31 +28,7 @@
 
 {% block conteudo %}
 
-   {% if email_cadastrado %}
-		Email cadastrado com sucesso
-	{% else %}
-		<div id="email" >
-					<form id="email-form" method="POST" action=".">{% csrf_token %} 
-						<!-- <p><label for="id_e-mail">E-mail:</label>
-						    <input id="id_email" type="text" name="email" maxlength="100" /></p>
-						<p><label for="id_cidade">Cidade:</label>
-							<select id="id_cidade" name="cidade">
-								<option value="Go">{{ cidade }} </option>
-								
-						
-							</select> -->
-							 {% for field in email_form %}
-        <div class="fieldWrapper">
-            {{ field.errors }}
-            {{ field.label_tag }}: {{ field }}
-        </div>
-    {% endfor %}
-							
-						<input type="submit" value="Cadastrar" />
-					</form>
-					
-				</div>
-	{% endif %}
+  
 <div id="conteudo" class="conteudo">
 	<div id="edicao_atual" class="edicao_atual">
 		<h1>Revistas da ultima edição em {{ cidade }}</h1>

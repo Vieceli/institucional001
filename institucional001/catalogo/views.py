@@ -49,6 +49,19 @@ def revistas(request, cidade_slug):
     meta_keywords = settings.META_KEYWORDS
     meta_description = settings.META_DESCRIPTION
     
+    email_form = EmailForm()
+    email_cadastrado = False  
+    email_duplicado=False     
+    if request.POST:
+        postdata = request.POST.copy()
+        email_form = EmailForm(postdata)
+        if email_form.is_valid():
+            cad_email=EmailInscricao()
+            cad_email.email=email_form.cleaned_data['email']
+            cidade=email_form.cleaned_data['cidade']
+            cad_email.save()
+            email_cadastrado = True
+    
     return render_to_response('revista/revistas.html',locals(),context_instance=RequestContext(request),)
     
 
@@ -61,6 +74,19 @@ def revista_flash(request,cidade_slug,slug): #slug eh a revista_slug
     revista = get_object_or_404(Revista, cidade=cidade, slug=slug)
     meta_keywords = revista.meta_keywords
     meta_description = revista.meta_description
+    
+    email_form = EmailForm()
+    email_cadastrado = False  
+    email_duplicado=False     
+    if request.POST:
+        postdata = request.POST.copy()
+        email_form = EmailForm(postdata)
+        if email_form.is_valid():
+            cad_email=EmailInscricao()
+            cad_email.email=email_form.cleaned_data['email']
+            cidade=email_form.cleaned_data['cidade']
+            cad_email.save()
+            email_cadastrado = True
     
     return render_to_response('revista/revista.html',locals(),context_instance=RequestContext(request),) 
     
@@ -115,8 +141,22 @@ def contato(request,cidade_slug):
                return redirect('contato_sucesso')
     else:
         form_contato = Contato_Form()
-
+    
+    email_form = EmailForm()
+    email_cadastrado = False       
+    if request.POST:
+        postdata = request.POST.copy()
+        email_form = EmailForm(postdata)
+        if email_form.is_valid():
+            cad_email=EmailInscricao()
+            cad_email.email=email_form.cleaned_data['email']
+            cidade=email_form.cleaned_data['cidade']
+            cad_email.save()
+            email_cadastrado = True
+            
     context = {'form_mapa': MapForm(initial={'map': gmap}),
+               'email_form':email_form,
+               'email_cadastrado':email_cadastrado,
                'form_contato': form_contato,
                'cidades_disponiveis':cidades_disponiveis,
                'cidade':cidade,
