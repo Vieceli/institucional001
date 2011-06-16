@@ -27,7 +27,7 @@ class EmailInscricao(models.Model):
         verbose_name_plural = _('Receber Email')
 
     email = models.EmailField(blank=True, help_text="Endereco de email")
-    cidade = models.CharField(max_length=20, choices=CIDADES, default=CIDADES[0][0])
+    cidade = models.CharField(max_length=20, choices=CIDADES, default=CIDADES[0][1])
     ativo = models.BooleanField(default=True, db_index=True)
 
     def __unicode__(self):
