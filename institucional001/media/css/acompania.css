@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+#all
+{	
+	display:block;
+	background-color:#F0F0F0;
+	background-repeat:repeat-y;
+	max-width:100%;
+	max-height:1300px;
+	z-index=1;
+}
+	
+}
+
+#body
+{
+	display:block;a
+	background-image:url('www.centralfarmacia.com.br\clipper\fundo.png');
+	background-repeat:repeat-y;
+	width:1024px;
+	height:1300px;
+	z-index:2;
+}
+	
+}
+
+#barra_topo
+{
+	width:1024px;
+	background-image:url('www.centralfarmacia.com.br\clipper\barra_topo.png');
+	background-repeat:repeat-x;
+	z-index:2;	
+}
+	
+#menu_topo
+{
+	width:1024px;	
+}
+
+#logo
+{
+	background-image:url('www.centralfarmacia.com.br\clipper\logo_top.png');
+	
+}
+		
+#menu_links
+{
+	display:inline
+	
+}
+
+#rodape
+{
+	
+}

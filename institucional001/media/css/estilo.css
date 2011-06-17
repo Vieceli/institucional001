@@ -19,7 +19,8 @@ a:hover{text-decoration:underline;}
 	position: relative
 	}
 #conteudo{
-	width:100%;
+	width:1024px;
+	height:1300px;
 	overflow:hidden;
 	position:relative;
 	float:left;
