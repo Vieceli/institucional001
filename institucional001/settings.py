@@ -2,7 +2,7 @@
 import os
 PROJECT_ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 FORCE_SCRIPT_NAME = ''
-DEFAULT_CITY_SLUG = 'goiania/'
+DEFAULT_CITY_SLUG = '/site/goiania/'
 LOGIN_URL = "/usuario/login/"
 LOGIN_REDIRECT_URL = "/"
 

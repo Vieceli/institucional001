@@ -13,9 +13,12 @@ from institucional001.contato.models import EmailInscricao, Contato
 #GeoIP
 from django.contrib.gis.utils import GeoIP
 from gmapi import maps
+from django.core import urlresolvers
+import datetime
 
 def cidade_index(request, cidade_slug):
     cidade = get_object_or_404(Cidade, slug=cidade_slug)
+    #cidade=cidade.cidade
     cidades_disponiveis = Cidade.objects.all()
     #revistas = Revista.objects.ativa_na_cidade(cidade)
     #revistas = get_object_or_404(Revista, cidade=cidade)
@@ -23,24 +26,40 @@ def cidade_index(request, cidade_slug):
     estreando = Revista.objects.filter(cidade=cidade,ativo=True,estreando=True)[:8]
     meta_keywords = settings.META_KEYWORDS
     meta_description = settings.META_DESCRIPTION
-                
-    email_form = EmailForm()
-    email_cadastrado = False  
-    email_duplicado=False  
-       
+    
+    
+              
+    if request.session.get('email_cadastrado', False):
+         email_cadastrado = True 
+    else:
+         email_cadastrado = False  
+         email_form = EmailForm()
+         email_duplicado=False
+   
     if request.POST:
         postdata = request.POST.copy()
         email_form = EmailForm(postdata)
         if email_form.is_valid():
             cad_email=EmailInscricao()
             cad_email.email=email_form.cleaned_data['email']
-            cidade=email_form.cleaned_data['cidade']
+            cad_email.cidade=email_form.cleaned_data['cidade']
             cad_email.save()
             email_cadastrado = True
+            request.session['email_cadastrado'] = True
 
     return render_to_response('index.html',locals(),context_instance=RequestContext(request),)
 
+#def set_cookie(response, key, value, days_expire = 7):
+#    if days_expire is None:
+#        max_age = 365*24*60*60  #one year
+#    else:
+#        max_age = days_expire*24*60*60 
+#    expires = datetime.datetime.strftime(datetime.datetime.utcnow() + datetime.timedelta(seconds=max_age), "%a, %d-%b-%Y %H:%M:%S GMT")
+#    response.set_cookie(key, value, max_age=max_age, expires=expires, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE or None)
+#    return response
+           
 def revistas(request, cidade_slug):
+    
     cidade = get_object_or_404(Cidade, slug=cidade_slug)
     cidades_disponiveis = Cidade.objects.all()
     #revistas = Revista.objects.ativa_na_cidade(cidade)
@@ -50,18 +69,24 @@ def revistas(request, cidade_slug):
     meta_keywords = settings.META_KEYWORDS
     meta_description = settings.META_DESCRIPTION
     
-    email_form = EmailForm()
-    email_cadastrado = False  
-    email_duplicado=False     
+              
+    if request.session.get('email_cadastrado', False):
+         email_cadastrado = True 
+    else:
+         email_cadastrado = False  
+         email_form = EmailForm()
+         email_duplicado=False    
     if request.POST:
         postdata = request.POST.copy()
         email_form = EmailForm(postdata)
         if email_form.is_valid():
             cad_email=EmailInscricao()
             cad_email.email=email_form.cleaned_data['email']
-            cidade=email_form.cleaned_data['cidade']
+            cad_email.cidade=email_form.cleaned_data['cidade']
             cad_email.save()
             email_cadastrado = True
+            #url = urlresolvers.reverse('revistas')
+           # return HttpResponseRedirect(url) 
     
     return render_to_response('revista/revistas.html',locals(),context_instance=RequestContext(request),)
     
@@ -76,16 +101,20 @@ def revista_flash(request,cidade_slug,slug): #slug eh a revista_slug
     meta_keywords = revista.meta_keywords
     meta_description = revista.meta_description
     
-    email_form = EmailForm()
-    email_cadastrado = False  
-    email_duplicado=False     
+              
+    if request.session.get('email_cadastrado', False):
+         email_cadastrado = True 
+    else:
+         email_cadastrado = False  
+         email_form = EmailForm()
+         email_duplicado=False    
     if request.POST:
         postdata = request.POST.copy()
         email_form = EmailForm(postdata)
         if email_form.is_valid():
             cad_email=EmailInscricao()
             cad_email.email=email_form.cleaned_data['email']
-            cidade=email_form.cleaned_data['cidade']
+            cad_email.cidade=email_form.cleaned_data['cidade']
             cad_email.save()
             email_cadastrado = True
     
@@ -143,15 +172,22 @@ def contato(request,cidade_slug):
     else:
         form_contato = Contato_Form()
     
-    email_form = EmailForm()
-    email_cadastrado = False       
+              
+    if request.session.get('email_cadastrado', False):
+         email_cadastrado = True 
+         email_form=None
+    else:
+         email_cadastrado = False  
+         email_form = EmailForm()
+         email_duplicado=False
+               
     if request.POST:
         postdata = request.POST.copy()
         email_form = EmailForm(postdata)
         if email_form.is_valid():
             cad_email=EmailInscricao()
             cad_email.email=email_form.cleaned_data['email']
-            cidade=email_form.cleaned_data['cidade']
+            cad_email.cidade=email_form.cleaned_data['cidade']
             cad_email.save()
             email_cadastrado = True
             
@@ -174,4 +210,6 @@ def _cidade_cliente(request):
     uni = cidade_cliente.decode('cp1252')
     cidade_cliente = uni.encode('utf8')
     return cidade_cliente
+
+
     

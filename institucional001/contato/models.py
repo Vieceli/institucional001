@@ -17,7 +17,7 @@ class Contato(models.Model):
     def __unicode__(self):
         return self.email
 
-CIDADES = (('Go', 'Goiania'),('An', 'Anapolis.'),)
+CIDADES = (('goiania', 'Goiania'),('anapolis', 'Anapolis'),)
 
 
 class EmailInscricao(models.Model):
