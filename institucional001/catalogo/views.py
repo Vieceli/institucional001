@@ -48,15 +48,6 @@ def cidade_index(request, cidade_slug):
             request.session['email_cadastrado'] = True
 
     return render_to_response('index.html',locals(),context_instance=RequestContext(request),)
-
-#def set_cookie(response, key, value, days_expire = 7):
-#    if days_expire is None:
-#        max_age = 365*24*60*60  #one year
-#    else:
-#        max_age = days_expire*24*60*60 
-#    expires = datetime.datetime.strftime(datetime.datetime.utcnow() + datetime.timedelta(seconds=max_age), "%a, %d-%b-%Y %H:%M:%S GMT")
-#    response.set_cookie(key, value, max_age=max_age, expires=expires, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE or None)
-#    return response
            
 def revistas(request, cidade_slug):
     
