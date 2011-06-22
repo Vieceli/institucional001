@@ -24,7 +24,13 @@
 {% endblock extrajs %}
 
 {% block conteudo %}
-<div id="revista_flash" class="revista_flash">
+
+	<div class="buscar-revista" style="display: none; overflow:hidden;" id="buscar-revista">
+				    <form>
+				      Buscar Formulario
+				    </form>          
+				</div>
+	<div id="revista_flash" class="revista_flash">
 	
 	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="900" height="600" id="revista" align="left">
 				<param name="movie" value="/media/{{ revista.arquivo }}" />

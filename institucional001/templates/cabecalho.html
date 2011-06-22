@@ -9,23 +9,7 @@
 				   		<li><a href="{% url cidade_index cidade_slug=cidade.slug %}">{{ cidade.cidade }}</a></li>
 				    {% endfor %}
 			    </ul>
-					
-					
-					
 			</div>
-			<div id="cidades-link" class="cidades-link" >
-					<a href="" class="cidade-slider-link" id="cidade-slider-link"> Clipper em outras cidades </a>
-			</div>
-			<div class="buscar-slider" style="display: none; overflow:hidden;">
-			    <form>
-			      Buscar Formulario
-			    </form>          
-			</div>
-		</div>
-		
-	<div id="logo" class="logo">
-    	
-    </div>
   	{% if email_cadastrado %}
 		Email cadastrado com sucesso
 	{% else %}
@@ -38,23 +22,40 @@
 					</form>
 					
 				</div>
-	{% endif %}
-    <div id="menu" class="menu">
-			<span id="item_menu" class="item_menu">
-				<a href="/">Inicio</a>
-			</span> |
-			<span id="item_menu" class="item_menu">
-				<a href="{% url revistas cidade %}">Revistas</a>
-			</span> |
-			<span id="item_menu" class="item_menu">
-				<a href="/anuncios/">Anuncios</a>
-			</span> |
-			<span id="item_menu" class="item_menu">
-				<a href="/casos-de-sucesso/">Casos de Sucesso</a>
-			</span> |
-			<span id="item_menu" class="item_menu">
-				<a href="{% url contato cidade %}">Contato</a>
-			</span> |
-	  
+	{% endif %}		
+					
+					
+			</div>
+			<div id="cidades-link" class="cidades-link" >
+					<a href="" class="cidade-slider-link" id="cidade-slider-link"> Clipper em outras cidades </a>
+			</div>
+			<div class="buscar-slider" style="display: none; overflow:hidden;">
+			    <form>
+			      Buscar Formulario
+			    </form>          
+			</div>
+		</div>
+	<div id="cabecalho_meio">
+		<div id="logo" class="logo">
+    	
+    	</div>
+  	
+    	<div id="menu" class="menu">
+				<span id="inicio-menu" class="inicio-menu">
+					<a href="/">Inicio</a>
+				</span> |
+				<span id="revistas-menu" class="revistas-menu">
+					<a href="{% url revistas cidade %}">Revistas</a>
+				</span> |
+				<span id="anuncios-menu" class="anuncios-menu">
+					<a href="/anuncios/">Anuncios</a>
+				</span> |
+				<span id="casos-menu" class="casos-menu">
+					<a href="/casos-de-sucesso/">Casos de Sucesso</a>
+				</span> |
+				<span id="contato-menu" class="contato-menu">
+					<a href="{% url contato cidade %}">Contato</a>
+				</span> |
+		</div>
 	</div>
 </div>

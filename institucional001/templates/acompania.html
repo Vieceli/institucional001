@@ -9,37 +9,32 @@
 
 <body>
 
-<div id=superdiv>
+<div id=all>
 	<div id=barra_topo>
 
 	</div>
     <div id=body>
     	<div id=menu_topo>
-       	  <div id=logo> 
-          <img src=  />
+       	  <div class=logo> 
+          <img alt="logo_clipper" src="/media/logo_top.png" />
 
 			</div>
-			<div id=links>
-            	<span>
-        			<a href="www.clippermagazine.com.br/acompania">A compania
-           			 </a>
-    			</span>
-        		<span>
-        			<a href="anuncieconosco">Anuncie Conosco
-            		</a>
-    			</span>
-        		<span>
-        			<a href="www.clippermagazine.com.br/casesdesucesso">Cases de sucesso
-           		 	</a>
-    			</span>
-        		<span>
-        			<a href="www.clippermagazine.com.br/agendeumavisita">Agende uma visita
-           		 	</a>
-    			</span>
-       		 	<span>
-        			<a href="www.clippermagazine.com.br/faleconosco">Fale conosco
-           		 	</a>
-    			</span>	
+			<div id=menu_links>
+            	<span id="item_menu" class="item_menu">
+				<a href="/">Inicio</a>
+			</span> |
+			<span id="item_menu" class="item_menu">
+				<a href="{% url revistas cidade %}">Revistas</a>
+			</span> |
+			<span id="item_menu" class="item_menu">
+				<a href="/anuncios/">Anuncios</a>
+			</span> |
+			<span id="item_menu" class="item_menu">
+				<a href="/casos-de-sucesso/">Casos de Sucesso</a>
+			</span> |
+			<span id="item_menu" class="item_menu">
+				<a href="{% url contato cidade %}">Contato</a>
+			</span> |	
 
 			</div>
 		</div>

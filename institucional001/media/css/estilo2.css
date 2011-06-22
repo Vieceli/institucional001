@@ -1,0 +1,329 @@
+/* corpo documento*/
+body{
+	margin:0;
+	font:12px Arial, Helvetica, sans-serif;
+	background:purple;
+	position:absolute;
+	width:1024px;
+	z-index: 1;
+}
+
+
+
+#conteiner{
+	
+	
+	width: 1024px;
+	height: 1300px;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	background: white;
+	z-index: 2;
+	}
+	
+	
+/* #conteudo{
+	width:1024px;
+	height:1300px;
+	overflow:hidden;
+	position:relative;
+	float:left;
+	background-color: orange;
+	/* padding:0 0 49px; 
+}*/
+
+
+img{
+	
+	border-style:none;
+}
+
+a{
+	text-decoration:none;
+	color:#1C1C1C; 
+}
+
+a:hover{
+	text-decoration:underline;
+	}
+	
+.center
+{
+margin-left:auto;
+margin-right:auto;
+
+}
+	
+
+
+
+/* Cabecalho*/
+
+#barra{ 
+	position: fixed;
+	width: 1024px;
+	height: 65px;
+	background-image: url(/media/img/barra_top.png);
+	z-index: 2;
+}
+
+#email{
+	float: right;
+}
+	
+#cabecalho{
+	position:fixed;
+	width:1024px;
+	background-color: silver;
+	display: inline;
+	z-index: 3;
+	
+}
+#logo{
+	width:343px;
+	height:157px;
+	position:fixed;
+	background-image: url(/media/img/logo_top.png);
+	float: left;
+	z-index: 3;
+	}
+	
+#cidades{
+	width:100%;
+	background-color: aqua;
+	
+	}
+
+.email{
+	float: right;
+	
+}
+
+.email-form{
+	
+}
+
+.cabecalho{
+	
+}
+
+.barra{
+	
+	
+}
+
+.cidade-link{
+	
+}
+
+
+	
+/* MENU*/
+
+#menu{
+	position:fixed;
+	top: 75px;
+	height: 50px;
+	float: right;
+	width:555px;
+	background-color: red;
+	z-index: 3;
+	}
+
+#item_menu{
+	
+	}
+	
+.menu{
+	
+}
+.inicio-menu{ 
+	
+}
+.inicio-menu a{ color: gray;
+	
+}
+.inicio-menu a:hover{ 
+	background: url(../media/img/bot_menu_inicio.png);
+	
+}
+.inicio-menu a:active{ 
+	background: url(../media/img/bot_menu_inicio.png);
+	
+}
+
+	
+.anuncios-menu{
+	
+}
+
+.anuncios-menu a:hover{ 
+	background: url(../media/img/bot_menu_anuncios.png);
+	
+}
+.anuncios-menu a:active{ 
+	background: url(../media/img/bot_menu_anuncios.png);
+	
+}
+
+.casos-menu{ 
+	
+}
+
+.casos-menu a:hover{ 
+	background: url(../media/img/bot_menu_casos.png);
+	
+}
+.casos-menu a:active{ 
+	background: url(../media/img/bot_menu_casos.png);
+	
+}
+
+
+.revistas-menu{
+
+}
+
+.revistas-menu a:hover{ 
+	background: url(../media/img/bot_menu_revistas.png);
+	
+}
+.revistas-menu a:active{ 
+	background: url(../media/img/bot_menu_revistas.png);
+	
+}	
+	
+.contato-menu{
+	
+}
+
+.contato-menu a:hover{ 
+	background: url(../media/img/bot_menu_contato.png);
+	
+}
+.contato-menu a:active{ 
+	background: url(../media/img/bot_menu_contato.png);
+	
+}
+
+
+	
+/* SLIDER*/	
+
+	
+.cidade-link{
+	
+	}
+	
+.cidade-slider-link{
+	
+	}
+.buscar-link{
+	
+	}
+	
+.buscar-slider-link{
+	
+	}
+	
+.cidade-slider li {
+  display:block;
+  float:left;
+  padding:10px 0 10px 30px;
+  background-image: url(/media/img/barra_topo.png);
+  font-size:1.2em;
+
+  list-style-type: none;
+
+  white-space:nowrap;
+
+  list-style-image:none;
+  list-style-position:outside;
+}
+
+.cidade-slider  a {
+  display:block;
+  float:left;
+  padding:10px 0 10px 30px;
+  width:129px;
+
+  border-style:none dashed dashed none;
+  font-size:1.2em;
+	
+  border-color: #999;
+  color: #fff;
+	
+  list-style-type: none;
+	
+   white-space:nowrap;
+	
+   list-style-image:none;
+   list-style-position:outside;
+}
+
+
+/* MEIO */
+
+
+
+#principal{
+	width:100%;
+	overflow:hidden;
+	padding:0 0 17px;
+	background:#d9ebf0 url(../images/bg-main.jpg) no-repeat 50% 153px;
+	display:table;
+}
+
+
+	
+	
+#empresa{
+	width: 100%;
+	text-indent: 5px;
+	background-color: yellow;
+	float: left;
+	position: relative;
+	height: 200px;
+	}
+	
+#video_empresa{
+	width: 50%;
+	text-indent: 5px;
+	background-color: black;
+	float: right;
+	position: relative;
+	height: 100%;
+	}
+	
+#agende_visita{
+	width: 100%;
+	text-indent: 5px;
+	
+	float: right;
+	position: relative;
+	height: 80px;
+
+}
+
+#edicao_atual{
+	float: left;
+	position: relative;
+	width: 100%;
+	
+	}
+#revista_edicao{
+	display: table;
+	border-style:solid;
+	
+	}
+#rodape{
+	background-color: lime;
+	position: relative;
+	clear: both;
+	width: 100%;
+	}
+	
+	
+
+

@@ -3,8 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-    <link rel="shortcut icon" href="/media/images/favicon.ico" >
-
+    <link rel="shortcut icon" href="d
     <title>{% block titulo %}{% endblock titulo %}Revista Clipper Magazine</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     <meta content="{{ meta_keywords }}" name="Keywords"/>
@@ -13,9 +12,11 @@
     <meta name="verify-v1" content="l4Z4jgwG5X58psxFkH3eILv9ua3nJKYrq5zGFZC0xj0=" />
     {% block metadata %}
     {% endblock metadata %}
-    <link type="text/css" rel="stylesheet" href="/media/js/css/acompania.css" />
+    
     <link type="text/css" rel="stylesheet" href="/media/js/css/ui-lightness/jquery-ui-1.7.2.custom.css" />
-    <link type="text/css" rel="stylesheet" href="/media/css/estilo.css" />
+  
+    <link type="text/css" rel="stylesheet" href="/media/css/estilo2.css" />
+    
     <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/media/css/lt8.css" /><![endif]-->
 
     {% block extralinks %}
@@ -55,12 +56,9 @@
 
 </head>
 
-<body>
+<body class="conteiner" >
 	<div id="conteiner" class="conteiner" >
-		{% block teste %}
-			{% include "acompania.html" %}
-		{% endblock teste %}
-		
+			
 		
 		{% block cabecalho %}
 			{% include "cabecalho.html" %}
@@ -74,7 +72,8 @@
 		 {% block rodape %}
 		 	{% include "rodape.html" %}
 		 {% endblock rodape %}
-		       
+		 
+		      
 	</div>
 
 </body>
