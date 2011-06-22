@@ -81,6 +81,12 @@ margin-right:auto;
 	
 	
 }
+
+#cabeçalho_meio{
+	width:1024px;
+	float: right;
+	
+}
 #logo{
 	width:343px;
 	height:157px;
@@ -123,7 +129,7 @@ margin-right:auto;
 /* MENU*/
 
 #menu{
-	position:fixed;
+	position:absolute;
 	top: 75px;
 	height: 50px;
 	float: right;
