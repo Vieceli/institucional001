@@ -5,7 +5,7 @@ body{
 	background:purple;
 	position:absolute;
 	width:1024px;
-	z-index: 1;
+	
 }
 
 
@@ -19,7 +19,7 @@ body{
 	margin-left:auto;
 	margin-right:auto;
 	background: white;
-	z-index: 2;
+	
 	}
 	
 	
@@ -65,7 +65,7 @@ margin-right:auto;
 	width: 1024px;
 	height: 65px;
 	background-image: url(/media/img/barra_top.png);
-	z-index: 2;
+	
 }
 
 #email{
@@ -73,20 +73,21 @@ margin-right:auto;
 }
 	
 #cabecalho{
+	float:left;
 	position:fixed;
 	width:1024px;
 	background-color: silver;
 	display: inline;
-	z-index: 3;
+	
 	
 }
 #logo{
 	width:343px;
 	height:157px;
-	position:fixed;
+	position:static;
 	background-image: url(/media/img/logo_top.png);
 	float: left;
-	z-index: 3;
+	
 	}
 	
 #cidades{
@@ -128,7 +129,7 @@ margin-right:auto;
 	float: right;
 	width:555px;
 	background-color: red;
-	z-index: 3;
+	
 	}
 
 #item_menu{
