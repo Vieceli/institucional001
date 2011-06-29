@@ -27,14 +27,23 @@ ADMINS = (
 )
 MANAGERS = ADMINS
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'institucional001',
+#        'USER': 'postgres',
+#        'PASSWORD': '1234',
+#    }
+#}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'institucional001',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
+        'USER': 'root',
+        'PASSWORD': 'Cl1pp3r1234',
     }
 }
+
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
