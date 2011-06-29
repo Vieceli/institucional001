@@ -15,10 +15,10 @@ body{
 	
 	width: 1024px;
 	height: 1300px;
-	height:100%;
 	margin-left:auto;
 	margin-right:auto;
-	background: white;
+	
+	background-color: white;
 	
 	}
 	
@@ -74,8 +74,10 @@ margin-right:auto;
 	
 #cabecalho{
 	float:left;
-	position:fixed;
+	position:absolute;
 	width:1024px;
+	margin-right:auto;
+	margin-left:auto;
 	background-color: silver;
 	display: inline;
 	

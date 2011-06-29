@@ -1,0 +1,325 @@
+/* SLIDER e MENU */
+
+
+
+#item_menu{
+	
+	}
+	
+.menu{
+	
+}
+.menu_inicio{ 
+	width: 111px;
+	height: 175px;
+	float: left;
+	
+}
+
+.menu_inicio a:hover { 
+	background: url(../media/img/bot_menu_inicio.png);
+	
+}
+.menu_inicio a:active { 
+	background: url(../media/img/bot_menu_inicio.png);
+	
+}
+
+	
+.menu_anuncios{
+	width: 111px;
+	height: 175px;
+	float: left;
+	
+}
+
+.menu_anuncios a:hover { 
+	background: url(../media/img/bot_menu_anuncios.png);
+	
+}
+.menu_anuncios a:active { 
+	background: url(../media/img/bot_menu_anuncios.png);
+	
+}
+
+.menu_casos{ 
+	width: 111px;
+	height: 175px;
+	float: left;
+}
+
+.menu_casos a:hover { 
+	background: url(../media/img/bot_menu_casos.png);
+	
+}
+.menu_casos a:active { 
+	background: url(../media/img/bot_menu_casos.png);
+	
+}
+
+
+.menu_revistas{
+	width: 111px;
+	height: 175px;
+	float: left;
+
+}
+
+.menu_revistas a:hover { 
+	background: url(../media/img/bot_menu_revistas.png);
+	
+}
+.menu_revistas a:active { 
+	background: url(../media/img/bot_menu_revistas.png);
+	
+}	
+	
+.menu_contato {
+	width: 111px;
+	height: 175px;
+	float: left;
+	
+}
+
+.menu_contato a:hover { 
+	background: url(../media/img/bot_menu_contato.png);
+	
+}
+.menu_contato a:active { 
+	background: url(../media/img/bot_menu_contato.png);
+	
+}
+
+
+	
+/* SLIDER*/	
+
+	
+.cidade-link{
+	
+	}
+	
+.cidade-slider-link{
+	
+	}
+.buscar-link{
+	
+	}
+	
+.buscar-slider-link{
+	
+	}
+	
+.cidade-slider li {
+  display:block;
+  float:left;
+  padding:10px 0 10px 30px;
+  background-image: url(/media/img/barra_topo.png);
+  font-size:1.2em;
+
+  list-style-type: none;
+
+  white-space:nowrap;
+
+  list-style-image:none;
+  list-style-position:outside;
+}
+
+.cidade-slider  a {
+  display:block;
+  float:left;
+  padding:10px 0 10px 30px;
+  width:129px;
+
+  border-style:none dashed dashed none;
+  font-size:1.2em;
+	
+  border-color: #999;
+  color: #fff;
+	
+  list-style-type: none;
+	
+   white-space:nowrap;
+	
+   list-style-image:none;
+   list-style-position:outside;
+}
+
+#cidades_link{
+	float: left;
+}
+
+/* CABEÇALHO */
+
+#cabecalho{
+	
+	
+}
+
+#cidades{
+	width: 1024px;
+	height: 65px;
+	background-image: url(/media/img/barra_top.png); 
+	
+}
+
+#cidades_link{
+	
+}
+
+#email{
+	float:right;
+	
+}
+
+#email_form{
+	
+}
+
+#recomendacoes{
+	
+}
+
+
+/* CSS Global Resets*/
+
+]
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin:0; padding:0; }
+
+table { 
+	border-collapse:collapse; border-spacing:0; }
+
+fieldset,img{ 
+	border:0; }
+
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+
+ol,ul { 
+	list-style:none; }
+
+caption,th { 
+	text-align:left; }
+
+h1,h2,h3,h4,h5,h6 { 
+	font-size:101.1%; font-weight:normal; }
+
+q:before,q:after { 
+	content:''; }
+
+abbr,acronym { 
+	border:0; }
+	
+
+/* CSS Global Resets*/
+
+/* COMECO */
+
+#conteiner{
+	width: 1024px;
+	height:1300px;
+	
+}
+
+
+body {
+	background-color: #ffffff;
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
+.p {
+	margin:0px;
+	padding:0px;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	text-align: inherit;
+	color: inherit;
+	line-height: inherit;
+	vertical-align: top;
+}
+p {
+	padding-top:0px;
+	margin-top:0px;
+}
+img {
+	border:0px;
+}
+div {
+	margin:0px;
+	padding:0px;
+	font-family:verdana; font-size:12px;
+}
+
+.center{
+	margin-bottom: auto;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.AbsWrap {
+	width: 100%;
+	position: relative;
+}
+.rowWrap {
+	width: 100%;
+}
+.clearfloat {
+	clear:both;
+	height:0px;
+}
+
+.floatleft{
+	float: left;
+}
+
+.floatright{
+	float: right;
+}
+
+
+	
+}
+
+#logo{
+	background-image: url(/media/img/logo_top.png);
+	float: left;
+	width:343px;
+	height: 175px;
+	
+}
+
+#menu{
+	background-color: white;
+	width: 1024px;
+	height: 175px;
+}
+
+#menu_canto_letf{
+	background-color: green;
+	width: 50px;
+	height: 175px;
+	float: left;
+	
+		
+}
+
+#menu_canto_right{
+	width:50px;
+	height: 175px;
+	float: right;
+	z-index: ;
+}
+
+.menu_bot{
+	background-color: blue;
+	width:111px;
+	height: 175px;
+	float: right;
+}
+
+
+
