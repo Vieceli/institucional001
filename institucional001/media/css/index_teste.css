@@ -73,6 +73,8 @@
 }
 
 #cidades_link{
+	position: relative;
+	left: 50px;
 	
 }
 
@@ -201,38 +203,180 @@ div {
 	float: left;
 	width:343px;
 	height: 175px;
+	overflow: hidden;
 	
 }
 
 
 #menu{
-	background-color: white;
+	background-color: blue;
 	width: 1024px;
-	height: 175px;
+	height: 176px;
+	display: inline;
+	overflow: hidden;
+	
 }
+
+.menu_img{
+	float: right;
+}
+.menu_link{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+}
+
 
 #menu_canto_letf{
 	background-color: green;
-	width: 50px;
+	width: 63px;
 	height: 175px;
 	float: left;
-	
 		
 }
 
 #menu_canto_right{
-	width:50px;
+	width:63px;
 	height: 175px;
 	float: right;
 	
 }
 
-.menu_bot{
-	background-color: blue;
-	width:111px;
-	height: 175px;
+.menu_inicio { 
 	float: right;
+	width: 111px;
+	height: 175px;
+	overflow:hidden;
+	
+	
 }
+.menu_inicio a{ 
+	color: #333333;
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+.menu_inicio a:hover{ 
+	background: url(/media/img/menu_inicio.png);
+	
+	
+	
+}
+.menu_inicio a:active{ 
+	background: url(/media/img/menu_inicio.png);
+	
+	
+	
+}
+
+.menu_anuncios a{ 
+	color: #333333;
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+	
+.menu_anuncios{
+	float: right;
+	margin-right: auto;
+	margin-left: auto;
+	width: 111px;
+	height: 175px;
+	
+}
+
+.menu_anuncios a:hover{ 
+	background: url(/media/img/menu_anuncie.png);
+	
+	
+}
+.menu_anuncios a:active{ 
+	background: url(/media/img/menu_anuncie.png);
+	
+}
+
+.menu_casos a{ 
+	color: #333333;
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+.menu_casos{ 
+	float: right;
+	margin-right: auto;
+	margin-left: auto;
+	width: 111px;
+	height: 175px;
+}
+
+.menu_casos a:hover{ 
+	background: url(/media/img/menu_casos.png);
+	
+}
+.menu_casos a:active{ 
+	background: url(/media/img/menu_casos.png);
+	
+
+.menu_revistas a{ 
+	color: #333333;
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+.menu_revistas{
+	float: right;
+	margin-right: auto;
+	margin-left: auto;
+	width: 111px;
+	height: 175px;
+}
+
+.menu_revistas a:hover{ 
+	background: url(/media/img/menu_revistas.png);
+		
+}
+.menu_revistas a:active{ 
+	background: url(/media/img/menu_revistas.png);
+	
+}	
+
+
+	
+.menu_contato{
+	float: right;
+	margin-right: auto;
+	margin-left: auto;
+	width: 111px;
+	height: 175px;
+	
+	
+}
+
+.menu_contato a{ 
+	color: #333333;
+	margin-right: auto;
+	margin-left: auto;
+	
+	
+}
+
+.menu_contato a:hover{ 
+	background: url(/media/img/menu_contato.png);
+	
+	
+}
+.menu_contato a:active{ 
+	background: url(/media/img/menu_contato.png);
+	
+}
+
+
+
 
 
 

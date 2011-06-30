@@ -19,16 +19,18 @@ a:hover{text-decoration:underline;}
 }
 
 #conteiner{
+	
+	background-color: white;
 	width: 50%;
 	left: 25%;
 	float: left;
-	position: relative
-	}
+	position: relative;
+}
 	
 #email{
-	float: right;
-	
+	float: right;	
 }
+
 #conteudo{
 	width:1024px;
 	height:1300px;
@@ -38,6 +40,7 @@ a:hover{text-decoration:underline;}
 	background-color: orange;
 	/* padding:0 0 49px; */
 }
+
 #principal{
 	width:100%;
 	overflow:hidden;
@@ -45,6 +48,7 @@ a:hover{text-decoration:underline;}
 	background:#d9ebf0 url(../images/bg-main.jpg) no-repeat 50% 153px;
 	display:table;
 }
+
 #cabecalho{
 	
 	width:100%;
@@ -52,42 +56,50 @@ a:hover{text-decoration:underline;}
 	display: inline;
 	float: left;
 }
+
 #logo{
 	width: 20%;
 	background-color: teal;
 	position: static;;
 	float: left;
 	height: 50px;
-	}
+}
+	
 #cidades{
 	width:100%;
 	background-color: aqua;
 	
-	}
+}
+
 #menu{
 	height: 50px;
 	float: right;
 	width: 80%;
 	background-color: red;
-	}
+}
 
 #item_menu{
 	
-	}
+}
+
+
+
+
 .cidade-link{
 	
-	}
+}
 	
 .cidade-slider-link{
 	
-	}
+}
 .buscar-link{
 	
-	}
+}
 	
 .buscar-slider-link{
 	
-	}
+}
+
 .cidade-slider li {
   display:block;
   float:left;
@@ -131,7 +143,7 @@ a:hover{text-decoration:underline;}
 	float: left;
 	position: relative;
 	height: 200px;
-	}
+}
 #video_empresa{
 	width: 50%;
 	text-indent: 5px;
@@ -139,7 +151,8 @@ a:hover{text-decoration:underline;}
 	float: right;
 	position: relative;
 	height: 100%;
-	}
+}
+
 #agende_visita{
 	width: 100%;
 	text-indent: 5px;
@@ -149,17 +162,20 @@ a:hover{text-decoration:underline;}
 	height: 80px;
 	
 }
+
 #edicao_atual{
 	float: left;
 	position: relative;
 	width: 100%;
 	
-	}
+}
+	
 #revista_edicao{
 	display: table;
 	border-style:solid;
 	
-	}
+}
+
 #rodape{
 	background-color: lime;
 	position: relative;
