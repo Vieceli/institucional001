@@ -132,6 +132,7 @@ abbr,acronym {
 	height:1300px;
 	margin-left: auto;
 	margin-right: auto;
+	display: block;
 }
 
 
@@ -198,6 +199,12 @@ div {
 	
 }
 
+#container_logomenu{
+	margin: 0px;
+	padding: 0px; 
+	
+}
+
 #logo{
 	background-image: url(/media/img/logo_top.png);
 	float: left;
@@ -209,27 +216,51 @@ div {
 
 
 #menu{
-	background-color: blue;
-	width: 1024px;
+	background-color: #fff;
+	width: 600px;
 	height: 176px;
-	display: inline;
 	overflow: hidden;
 	
+}
+
+
+#menu li {
+	float: left;
+	font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#menu a {
+	background: #fff  bottom right no-repeat;
+	color: #ccc;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 20px 20px;
+	text-decoration: none;
+	
+}
+
+#menu a:hover {
+	background:  url("/media/img/bot_menu_marinho.png") bottom center no-repeat;
+	color: #fff;
+	padding-bottom: 8px;
 }
 
 .menu_img{
 	float: right;
 }
+
 .menu_link{
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-}
 	
 }
+	
 
 
-#menu_canto_letf{
+
+menu_canto_letf{
 	background-color: green;
 	width: 63px;
 	height: 175px;
@@ -237,14 +268,14 @@ div {
 		
 }
 
-#menu_canto_right{
+menu_canto_right{
 	width:63px;
 	height: 175px;
 	float: right;
 	
 }
 
-.menu_inicio { 
+menu_inicio { 
 	float: right;
 	width: 111px;
 	height: 175px;
@@ -252,34 +283,33 @@ div {
 	
 	
 }
-.menu_inicio a{ 
-	color: #333333;
+menu_inicio a{ 	color: #333333;
 	margin-right: auto;
 	margin-left: auto;
 	
 }
 
-.menu_inicio a:hover{ 
+menu_inicio a:hover{ 
 	background: url(/media/img/menu_inicio.png);
 	
 	
 	
 }
-.menu_inicio a:active{ 
+menu_inicio a:active{ 
 	background: url(/media/img/menu_inicio.png);
 	
 	
 	
 }
 
-.menu_anuncios a{ 
+menu_anuncios a{ 
 	color: #333333;
 	margin-right: auto;
 	margin-left: auto;
 	
 }
 	
-.menu_anuncios{
+menu_anuncios{
 	float: right;
 	margin-right: auto;
 	margin-left: auto;
@@ -288,24 +318,24 @@ div {
 	
 }
 
-.menu_anuncios a:hover{ 
+menu_anuncios a:hover{ 
 	background: url(/media/img/menu_anuncie.png);
 	
 	
 }
-.menu_anuncios a:active{ 
+menu_anuncios a:active{ 
 	background: url(/media/img/menu_anuncie.png);
 	
 }
 
-.menu_casos a{ 
+menu_casos a{ 
 	color: #333333;
 	margin-right: auto;
 	margin-left: auto;
 	
 }
 
-.menu_casos{ 
+menu_casos{ 
 	float: right;
 	margin-right: auto;
 	margin-left: auto;
@@ -313,22 +343,22 @@ div {
 	height: 175px;
 }
 
-.menu_casos a:hover{ 
+menu_casos a:hover{ 
 	background: url(/media/img/menu_casos.png);
 	
 }
-.menu_casos a:active{ 
+menu_casos a:active{ 
 	background: url(/media/img/menu_casos.png);
 	
 
-.menu_revistas a{ 
+menu_revistas a{ 
 	color: #333333;
 	margin-right: auto;
 	margin-left: auto;
 	
 }
 
-.menu_revistas{
+menu_revistas{
 	float: right;
 	margin-right: auto;
 	margin-left: auto;
@@ -336,18 +366,18 @@ div {
 	height: 175px;
 }
 
-.menu_revistas a:hover{ 
+menu_revistas a:hover{ 
 	background: url(/media/img/menu_revistas.png);
 		
 }
-.menu_revistas a:active{ 
+menu_revistas a:active{ 
 	background: url(/media/img/menu_revistas.png);
 	
 }	
 
 
 	
-.menu_contato{
+menu_contato{
 	float: right;
 	margin-right: auto;
 	margin-left: auto;
@@ -357,7 +387,7 @@ div {
 	
 }
 
-.menu_contato a{ 
+menu_contato a{ 
 	color: #333333;
 	margin-right: auto;
 	margin-left: auto;
@@ -365,12 +395,12 @@ div {
 	
 }
 
-.menu_contato a:hover{ 
+menu_contato a:hover{ 
 	background: url(/media/img/menu_contato.png);
 	
 	
 }
-.menu_contato a:active{ 
+menu_contato a:active{ 
 	background: url(/media/img/menu_contato.png);
 	
 }
