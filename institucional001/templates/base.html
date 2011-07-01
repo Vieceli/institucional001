@@ -57,8 +57,8 @@
 
 
 </head>
- <!--classe conteiner apagada de body-->
-<body  >
+
+<body>
 	<div id="conteiner" class="conteiner" >
 			
 		
@@ -66,9 +66,12 @@
 			{% include "cabecalho.html" %}
 		{% endblock cabecalho %}
 	
-		
+		<div id="conteudo" class="conteudo">
 		{% block conteudo %}
-		{% endblock %}
+			
+		{% endblock %}	
+		</div>
+		
 		
 		 
 		 {% block rodape %}

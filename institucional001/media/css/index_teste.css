@@ -1,9 +1,39 @@
+/* Globais */		
 
+body {
+	background-color: #ffffff;
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
+
+.p {
+	margin:0px;
+	padding:0px;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	text-align: inherit;
+	color: inherit;
+	line-height: inherit;
+	vertical-align: top;
+}
+p {
+	padding-top:0px;
+	margin-top:0px;
+}
+img {
+	border:0px;
+}
+div {
+	margin:0px;
+	padding:0px;
+	font-family:verdana; font-size:12px;
+} 
 
 	
-/* SLIDER*/	
-
-	
+/* SLIDER*/		
 .cidade-link{
 	
 	}
@@ -61,14 +91,16 @@
 /* CABEÇALHO */
 
 #cabecalho{
-	
-	
+	background-color: red;
+	padding: 6px;
 }
 
 #cidades{
 	width: 1024px;
 	height: 65px;
 	background-image: url(/media/img/barra_top.png); 
+	position: relative;
+	float: left;
 	
 }
 
@@ -91,11 +123,87 @@
 	
 }
 
+#conteiner{
+	width: 1024px;
+	height:1300px;
+	margin-left: auto;
+	margin-right: auto;
+	/* display: block; */
+	position: relative;
+	float: left;
+}
+
+#container_logomenu{
+	margin: 0px;
+	padding: 0px; 
+	
+	
+}
+
+#logo{
+	background-image: url(/media/img/logo_top.png);
+	float: left;
+	width:343px;
+	height: 175px;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+
+#menu{
+	background-color: #fff;
+	width: 600px;
+	height: 176px;
+	overflow: hidden;
+	
+}
+
+
+#menu li {
+	float: left;
+	font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#menu a {
+	background: #fff  bottom right no-repeat;
+	color: #ccc;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 20px 20px;
+	text-decoration: none;
+	
+}
+
+#menu a:hover {
+	background:  url("/media/img/bot_menu_marinho.png") bottom center no-repeat;
+	color: #fff;
+	/* padding-bottom: 8px; */
+}
+
 
 /* CSS Global Resets*/
 
-]
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+/* .clearfloat {
+	clear:both;
+	height:0px;
+}
+
+.floatleft{
+	float: left;
+} 
+.floatright{
+	float: right;
+}
+
+*/
+
+
+/* body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
 	margin:0; padding:0; }
 
 table { 
@@ -119,7 +227,7 @@ q:before,q:after {
 	content:''; }
 
 abbr,acronym { 
-	border:0; }
+	border:0; } */
 	
 
 /* CSS Global Resets*/
@@ -127,139 +235,8 @@ abbr,acronym {
 /* COMECO */
 
 
-#conteiner{
-	width: 1024px;
-	height:1300px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
 
-
-body {
-	background-color: #ffffff;
-	width:100%;
-	height:100%;
-	margin:0px;
-	padding:0px;
-}
-
-.p {
-	margin:0px;
-	padding:0px;
-	font-size: inherit;
-	font-family: inherit;
-	font-weight: inherit;
-	text-align: inherit;
-	color: inherit;
-	line-height: inherit;
-	vertical-align: top;
-}
-p {
-	padding-top:0px;
-	margin-top:0px;
-}
-img {
-	border:0px;
-}
-div {
-	margin:0px;
-	padding:0px;
-	font-family:verdana; font-size:12px;
-}
-
-.center{
-	margin-bottom: auto;
-	margin-top: auto;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.AbsWrap {
-	width: 100%;
-	position: relative;
-}
-.rowWrap {
-	width: 100%;
-}
-.clearfloat {
-	clear:both;
-	height:0px;
-}
-
-.floatleft{
-	float: left;
-}
-
-.floatright{
-	float: right;
-}
-
-
-	
-}
-
-#container_logomenu{
-	margin: 0px;
-	padding: 0px; 
-	
-}
-
-#logo{
-	background-image: url(/media/img/logo_top.png);
-	float: left;
-	width:343px;
-	height: 175px;
-	overflow: hidden;
-	
-}
-
-
-#menu{
-	background-color: #fff;
-	width: 600px;
-	height: 176px;
-	overflow: hidden;
-	
-}
-
-
-#menu li {
-	float: left;
-	font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-#menu a {
-	background: #fff  bottom right no-repeat;
-	color: #ccc;
-	display: block;
-	float: left;
-	margin: 0;
-	padding: 20px 20px;
-	text-decoration: none;
-	
-}
-
-#menu a:hover {
-	background:  url("/media/img/bot_menu_marinho.png") bottom center no-repeat;
-	color: #fff;
-	padding-bottom: 8px;
-}
-
-.menu_img{
-	float: right;
-}
-
-.menu_link{
-	position: relative;
-	
-}
-	
-
-
-
+/* 
 menu_canto_letf{
 	background-color: green;
 	width: 63px;
@@ -404,7 +381,7 @@ menu_contato a:active{
 	background: url(/media/img/menu_contato.png);
 	
 }
-
+ */
 
 
 
